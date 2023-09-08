@@ -53,8 +53,10 @@ workflows:
       max_build_duration: 120
       instance_type: mac_mini_m1
       environment:
-        flutter: latest
+        node: 14
+        yarn: 1.x
         xcode: latest
+        android: latest
       scripts:
         - name: Install dependencies
           script: |
