@@ -1,12 +1,3 @@
-# ios-workflow:
-#   scripts:
-#       script: |
-#         set -e # exit on first failed command
-
-#         cd $ANDROID_HOME/tools
-#         emulator -avd emulator &
-#         adb wait-for-device
-
 workflows:
     react-native-android:
         name: React Native Android
@@ -18,7 +9,7 @@ workflows:
           groups:
             - google_play # <-- (Includes GCLOUD_SERVICE_ACCOUNT_CREDENTIALS <-- Put your google-services.json)
           vars:
-            PACKAGE_NAME: "io.codemagic.sample.reactnative"
+            PACKAGE_NAME: "io.codemagic.sample.reactnative" # <-- Put your package name here e.g. com.domain.myapp
           node: v16.11.1
         scripts:
             - name: Install npm dependencies
@@ -50,15 +41,14 @@ workflows:
             notify:
               success: true     # To not receive a notification when a build succeeds
               failure: false    # To not receive a notification when a build fails
-
-          cache:
-            cache_paths:
-              - $CM_BUILD_DIR/node_modules
-
-
           google_play:
             credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS
             track: alpha   # Any default or custom track that is not in ‘draft’ status
+
+
+
+
+
     react-native-ios:
         name: React Native iOS
         max_build_duration: 120
@@ -119,7 +109,7 @@ workflows:
             auth: integration
 
             submit_to_testflight: true
-            beta_groups:
+            beta_groups: # Specify the names of beta tester groups that will get access to the build once it has passed beta review.
               - group name 1
               - group name 2
 
