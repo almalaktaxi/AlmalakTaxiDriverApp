@@ -54,7 +54,7 @@ workflows:
       instance_type: mac_mini_m1
       environment:
         node: 14
-        yarn: 1.x
+        # yarn: 1.x
         xcode: latest
         android: latest
       scripts:
