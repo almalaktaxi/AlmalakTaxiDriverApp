@@ -57,7 +57,7 @@ workflows:
         # yarn: 1.x
         # xcode: latest
         # android: latest
-      # scripts:
+      scripts:
       #   - name: Install dependencies
       #     script: |
       #       # Add any setup steps here, like installing dependencies
