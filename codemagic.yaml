@@ -61,6 +61,7 @@ workflows:
         - name: Install dependencies
           script: |
             # Add any setup steps here, like installing dependencies
+            rm -rf node_modules package-lock.json
             npm install
             # If you use CocoaPods for iOS dependencies, you might need to run:
             # cd ios && pod install && cd ..
