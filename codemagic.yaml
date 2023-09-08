@@ -55,7 +55,7 @@ workflows:
       environment:
         # node: 14
         # yarn: 1.x
-        xcode: latest
+        # xcode: latest
         # android: latest
       # scripts:
       #   - name: Install dependencies
