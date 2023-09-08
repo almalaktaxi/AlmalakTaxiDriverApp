@@ -57,14 +57,14 @@ workflows:
         # yarn: 1.x
         xcode: latest
         # android: latest
-      scripts:
-        - name: Install dependencies
-          script: |
-            # Add any setup steps here, like installing dependencies
-            rm -rf node_modules package-lock.json
-            npm install
-            # If you use CocoaPods for iOS dependencies, you might need to run:
-            # cd ios && pod install && cd ..
+      # scripts:
+      #   - name: Install dependencies
+      #     script: |
+      #       # Add any setup steps here, like installing dependencies
+      #       rm -rf node_modules package-lock.json
+      #       npm install
+      #       # If you use CocoaPods for iOS dependencies, you might need to run:
+      #       # cd ios && pod install && cd ..
 
         - name: Build iOS app
           script: |
