@@ -13,7 +13,7 @@ const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'almalaktaxi-admin-panel',
+    database: 'esojai-admin-panel',
     debug: false
 })
 
@@ -168,6 +168,10 @@ io.on('connection', (socket) => {
     });
 });
 
-server.listen(PORT, () => {
-    console.log('server running on PORT: ' + PORT)
+//server.listen(PORT, () => {
+//    console.log('server running on PORT: ' + PORT)
+//});
+
+server.listen(PORT, '95.111.248.235', () => {
+    console.log('server running on IP: 95.111.248.235, PORT: ' + PORT);
 });

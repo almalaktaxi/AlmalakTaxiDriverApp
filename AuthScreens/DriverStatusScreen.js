@@ -20,7 +20,7 @@ export default function DriverStatusScreen(props) {
 
         <View style={{marginBottom: 30, marginTop: 300}}>
           <Text style={{textAlign: 'center', fontSize: 20, color: '#333'}}>Hi, {props.route.params ? props.route.params.userName : ""}</Text>
-          <Text style={styles.welcome}>Welcome to AlmalakTaxi Driver App</Text>
+          <Text style={styles.welcome}>Welcome to Almalak Driver App</Text>
           <Text style={{textAlign: 'center', fontSize: 16, paddingHorizontal: 25, lineHeight: 25}}>Your profile is pending for approval. Please wait until is approved. When approved we will confirm you through SMS.</Text>
         </View>
         </ImageBackground>

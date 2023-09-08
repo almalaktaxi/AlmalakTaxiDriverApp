@@ -23,7 +23,7 @@ export default class SelectDivision extends Component{
   }
 
   getDivisionData = () => {
-    // fetch('http://admin-panel.almalaktaxi.com/api/android/driver/divisions')
+    // fetch('http://admin-panel.almalak.com/api/android/driver/divisions')
     // .then(response => response.json())
     // .then(json => {
     //   console.log("data: "+json);

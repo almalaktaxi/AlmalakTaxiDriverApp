@@ -11,7 +11,7 @@ import { Colors, Typography } from '../../styles';
 export default function InviteFriends(props) {
   const [invitationCode, setInvitationCode] = React.useState('');
   const [invitationUrl, setInvitationUrl] = React.useState();
-  const [shareMessage, setShareMessage] = React.useState("Get 50% off (upto BDT 100) on your first AlmalakTaxi ride! To accept, signup and use code: "+invitationCode +'\n\n' + "Download now: https://play.google.com/store/apps/details?id=com.almalaktaxi.almalaktaxiuserapp");
+  const [shareMessage, setShareMessage] = React.useState("Get 50% off (upto BDT 100) on your first Almalak ride! To accept, signup and use code: "+invitationCode +'\n\n' + "Download now: https://play.google.com/store/apps/details?id=com.almalak.almalakuserapp");
 
   const getUserData = async () => {
     axios.get(BASE_URL+'/get-invitation-code/'+props.route.params.mobile)
@@ -29,10 +29,10 @@ export default function InviteFriends(props) {
     try {
       const result = await Share.share({
         message: shareMessage,
-        url: 'http://almalaktaxi.com',
-        title: 'AlmalakTaxi Ride Discount'
+        url: 'http://almalak.com',
+        title: 'Almalak Ride Discount'
       },
-      { dialogTitle: 'AlmalakTaxi Ride Discount' });
+      { dialogTitle: 'Almalak Ride Discount' });
 
       if (result.action === Share.sharedAction) {
         if (result.activityType) {

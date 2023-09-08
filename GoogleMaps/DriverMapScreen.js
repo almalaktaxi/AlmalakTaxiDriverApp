@@ -91,7 +91,7 @@ export default class DriverMapScreen extends Component {
     this.unsubscribe = NetInfo.addEventListener(state => { this.setState({connectionType: state.type, isConnected: state.isConnected}); });
     const { isConnected, type, isWifiEnabled } = await NetInfo.fetch();    
     const enableHighAccuracy = (type === "wifi" || undefined) ? false : true;
-    this.isLocationEnabled();
+    // this.isLocationEnabled();
     this.getUserData();
 
     let granted = false;
@@ -232,7 +232,7 @@ export default class DriverMapScreen extends Component {
       .then(data => {
         this.props.navigation.replace( 'DriverMapScreen', null, null );
       })
-      .catch(err =>  alert("Error " + err.message + ", Code : " + err.code));
+      .catch(err =>  Alert.alert("Error " + err.message + ", Code : " + err.code));
     }
   }
 
@@ -254,7 +254,7 @@ export default class DriverMapScreen extends Component {
 
 
   async activeDriverStatus() {
-    this.setState({ animating: true, driverStatus: true });
+    // this.setState({ animating: true, driverStatus: true });
     this.findPassengers();
 
     await axios.post(`${BASE_URL}/change-driver-status`, {
@@ -318,7 +318,7 @@ export default class DriverMapScreen extends Component {
         console.log("Looking Passenger: "+this.state.lookingForPassengers);
       }); //Socket Connection
 
-      this.socket.on('taxiRequest', request => {
+      this.socket.on('Request', request => {
         //console.log(request.routeResponse);
         
         this.setState({

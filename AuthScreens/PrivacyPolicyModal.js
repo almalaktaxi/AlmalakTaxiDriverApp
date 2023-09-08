@@ -27,10 +27,10 @@ export default function TermsModalScreen({ navigation }) {
     <View style={styles.container}>
       <Text style={styles.title}>Privacy Policy</Text>
       <ScrollView style={styles.tcContainer} onScroll={scrollEvent}>
-        <Text style={styles.tcP}>Failure to abide by AlmalakTaxi’s Terms of Service or other policies can result in temporary or permanent deactivation from the AlmalakTaxi platform.</Text>
+        <Text style={styles.tcP}>Failure to abide by Almalak’s Terms of Service or other policies can result in temporary or permanent deactivation from the Almalak platform.</Text>
         <Text style={styles.tcP}>To ensure a safe and respectful ride, do not:</Text>
-        <Text style={styles.tcL}>{'\u2022'} Violate AlmalakTaxi’s weapons policy by bringing a weapon along on a AlmalakTaxi ride or on AlmalakTaxi property.</Text>
-        <Text style={styles.tcL}>{'\u2022'} Violate AlmalakTaxi’s age requirement, which prohibits anyone under the age of 18 from riding without an adult.</Text>
+        <Text style={styles.tcL}>{'\u2022'} Violate Almalak’s weapons policy by bringing a weapon along on a Almalak ride or on Almalak property.</Text>
+        <Text style={styles.tcL}>{'\u2022'} Violate Almalak’s age requirement, which prohibits anyone under the age of 18 from riding without an adult.</Text>
         <Text style={styles.tcL}>{'\u2022'} Transport a child without a safety seat appropriate for the child’s weight.</Text>
         <Text style={styles.tcL}>{'\u2022'} Request rides for groups that cannot fit in the specified ride type.</Text>
         <Text style={styles.tcL}>{'\u2022'} Violate road safety laws including local scooter and bike laws.</Text>
@@ -41,7 +41,7 @@ export default function TermsModalScreen({ navigation }) {
         <Text style={styles.tcL}>{'\u2022'} Smoke, vape, or consume alcohol during your ride.</Text>
         <Text style={styles.tcL}>{'\u2022'} Damage drivers’ or other riders’ property.</Text>
         <Text style={styles.tcL}>{'\u2022'} Engage in fraudulent behavior, including but not limited to: using a stolen phone or credit card to request a ride, coupon phishing, or manipulating reviews for ride credit.</Text>
-        <Text style={styles.tcL}>{'\u2022'} Broadcast or record in violation of state or local laws or AlmalakTaxi’s recording device policy.</Text>
+        <Text style={styles.tcL}>{'\u2022'} Broadcast or record in violation of state or local laws or Almalak’s recording device policy.</Text>
       </ScrollView>
 
       <TouchableOpacity disabled={ !accepted } onPress={ acceptHandler } style={ accepted ? styles.button : styles.buttonDisabled }><Text style={styles.buttonLabel}>Accept</Text></TouchableOpacity>

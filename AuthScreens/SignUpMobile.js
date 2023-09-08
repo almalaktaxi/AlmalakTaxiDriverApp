@@ -7,7 +7,7 @@ import * as Animatable from 'react-native-animatable';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import CustomStatusBar from '../components/CustomStatusBar';
 import axios from "axios";
-import { BASE_URL, SMS_API_URL, SMS_API_KEY, SMS_SENDER_ID } from '../config/api';
+import { BASE_URL, SMS_API_URL } from '../config/api';
 import { Colors } from '../styles';
 import { Options } from '../config';
 import CountryPickerModal from './CountryPickerModal';
@@ -42,15 +42,12 @@ export default class SignUpMobile extends Component {
     let sms_status_array = {1002 : "Sender Id/Masking Not Found", 1003 : "API Not Found", 1004 : "SPAM Detected", 1005 : "Internal Error", 1006 : "Internal Error", 1007 : "Balance Insufficient", 1008 : "Message is empty", 1009 : "Message Type Not Set (text/unicode)", 1010 : "Invalid User & Password", 1011 : "Invalid User Id" }
 
     axios.post(SMS_API_URL, {
-      api_key: SMS_API_KEY,
-      type: 'text',
-      contacts: RECEIVER_NUMBER,
-      senderid: SMS_SENDER_ID,
-      msg: "Your O.TP is "+OTP_CODE+" to Sign Up AlmalakTaxi. This O.TP will be expired within 1 minutes."
+      to_number: RECEIVER_NUMBER,
+      message: "Your OTP is "+OTP_CODE+" to Sign Up Almalak. This O.TP will be expired within 1 minutes."
     })
     .then(res => { 
       console.log("OPT to SMS: "+res.data);
-      if(sms_status_array[res.data]) { alert(sms_status_array[res.data] + " Please contact to App Provider."); }
+      // if(sms_status_array[res.data]) { alert(sms_status_array[res.data] + " Please contact to App Provider."); }
     })
     .catch((error) => {
       console.log("Submitting Error: "+error); 
@@ -283,7 +280,7 @@ export default class SignUpMobile extends Component {
           <Animatable.View animation="slideInUp" iterationCount={1} useNativeDriver={true} style={{flex:4, paddingBottom: 40, backgroundColor: "#fff" }}>
             <Animated.View style={{ height: this.loginHeight, backgroundColor: 'white' }}>
               <Animated.View style={{ opacity: headerTextOpacity, alignItems: 'flex-start', paddingHorizontal: 25, marginTop: marginTop }}>
-                <Text style={{ fontSize: 24, marginVertical: 15 }}>Welcome to AlmalakTaxi Ride</Text>
+                <Text style={{ fontSize: 24, marginVertical: 15 }}>Welcome to Almalak Ride</Text>
               </Animated.View>
 
               <TouchableOpacity onPress={() => {}}>
@@ -304,7 +301,7 @@ export default class SignUpMobile extends Component {
             </Animated.View>
 
             <Text style={{ fontSize: 12, lineHeight: 20, color: '#666', paddingVertical: 10, paddingHorizontal: 30, textAlign: 'center', marginTop: 5 }}>By tapping continue, I confirm that I have read and agree to the <Text style={styles.hyperLinkText} onPress={()=> this.props.navigation.navigate('TermsAndConditionsModal') }>Terms & Conditions</Text> and <Text style={styles.hyperLinkText} onPress={()=> this.props.navigation.navigate('PrivacyPolicyModal') }>
-              Privacy Policy</Text> of AlmalakTaxi
+              Privacy Policy</Text> of Almalak
             </Text>
           </Animatable.View>{ /*Bottom Part*/ }
 

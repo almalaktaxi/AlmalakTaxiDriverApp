@@ -353,7 +353,7 @@ export const SignUpForm = (props) => {
               <TextInput style={styles.textinput} placeholder="Referral Mobile (Optional)" placeholderTextColor="rgba(0,0,0,.5)" keyboardType="numeric" returnKeyType="go" autoCorrect={false} underlineColorAndroid="transparent" onChangeText={val => setReferralMobile( val )} value={referralMobile} maxLength={13} ref={referralMobRef} />
             </View>
 
-            <Text style={{ fontSize: 14, lineHeight: 20, color: '#666', paddingVertical: 10, paddingHorizontal: 20, textAlign: 'justify', width: SCREEN_WIDTH-20, marginLeft: -20 }}>By tapping continue, I confirm that I have read and agree to the <Text style={styles.hyperLinkText} onPress={()=> props.navigation.navigate('TermsAndConditionsModal') }>Terms & Conditions</Text> and <Text style={styles.hyperLinkText} onPress={()=> props.navigation.navigate('PrivacyPolicyModal') }>Privacy Policy</Text> of AlmalakTaxi</Text>
+            <Text style={{ fontSize: 14, lineHeight: 20, color: '#666', paddingVertical: 10, paddingHorizontal: 20, textAlign: 'justify', width: SCREEN_WIDTH-20, marginLeft: -20 }}>By tapping continue, I confirm that I have read and agree to the <Text style={styles.hyperLinkText} onPress={()=> props.navigation.navigate('TermsAndConditionsModal') }>Terms & Conditions</Text> and <Text style={styles.hyperLinkText} onPress={()=> props.navigation.navigate('PrivacyPolicyModal') }>Privacy Policy</Text> of Almalak</Text>
           </View>
         </TouchableWithoutFeedback>
       </ScrollView>

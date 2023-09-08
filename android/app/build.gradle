@@ -73,9 +73,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.almalaktaxidriverapp"
+    namespace "com.almalakdriverapp"
     defaultConfig {
-        applicationId "com.almalaktaxidriverapp"
+        applicationId "com.almalakdriverapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

@@ -60,7 +60,7 @@ export default class VehicleInformation extends Component{
   }
 
   getVehicleData = () => {
-    // fetch('http://admin-panel.almalaktaxi.com/api/android/driver/divisions')
+    // fetch('http://admin-panel.almalak.com/api/android/driver/divisions')
     // .then(response => response.json())
     // .then(json => {
     //   console.log("data: "+json);
@@ -68,7 +68,7 @@ export default class VehicleInformation extends Component{
     // });
 
     
-    // axios.get('http://admin-panel.almalaktaxi.com/api/android/driver/divisions')
+    // axios.get('http://admin-panel.almalak.com/api/android/driver/divisions')
     // .then(function (response) {
     //   console.log(response.data);
     //   this.setState({ manufacturers: response.data });

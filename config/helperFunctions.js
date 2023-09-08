@@ -17,8 +17,8 @@ const checkAndroidPermissions = async () => {
     try {
         const granted = await PermissionsAndroid.request(
             PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION, {
-                title: "AlmalakTaxi App", 
-                message: "AlmalakTaxi App needs to use your location to show routes and search for a ride",          
+                title: "Almalak App", 
+                message: "Almalak App needs to use your location to show routes and search for a ride",          
                 buttonNeutral: "Ask Me Later", buttonNegative: "Cancel", buttonPositive: "OK"
             }
         );

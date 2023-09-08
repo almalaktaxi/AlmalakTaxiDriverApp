@@ -1,4 +1,4 @@
-package com.almalaktaxidriverapp;
+package com.almalakdriverapp;
 
 import android.app.Application;
 import com.facebook.react.PackageList;

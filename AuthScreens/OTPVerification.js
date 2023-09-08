@@ -8,7 +8,7 @@ import axios from "axios";
 import OtpInputs from './OtpInputs';
 import { AuthContext } from './context';
 import CustomStatusBar from '../components/CustomStatusBar';
-import { BASE_URL, SMS_API_URL, SMS_API_KEY, SMS_SENDER_ID } from '../config/api';
+import { BASE_URL, SMS_API_URL } from '../config/api';
 import { Colors } from '../styles';
 import { Options } from '../config';
 // import { SMSReceiver } from '../components/SMSReceiver';
@@ -92,11 +92,8 @@ export const OTPVerification = (props) => {
     let sms_status_array = {1002 : "Sender Id/Masking Not Found", 1003 : "API Not Found", 1004 : "SPAM Detected", 1005 : "Internal Error", 1006 : "Internal Error", 1007 : "Balance Insufficient", 1008 : "Message is empty", 1009 : "Message Type Not Set (text/unicode)", 1010 : "Invalid User & Password", 1011 : "Invalid User Id" }
 
     axios.post(SMS_API_URL, {
-      api_key: SMS_API_KEY,
-      type: 'text',
-      contacts: mobile,
-      senderid: SMS_SENDER_ID,
-      msg: "Your OTP is "+OTP_CODE+" to login AlmalakTaxi. This OTP will be expired within 1 minutes."
+      to_number: mobile,
+      message: "Your OTP is "+OTP_CODE+" to login Almalak. This OTP will be expired within 1 minutes."
     })
     .then(res => { 
       if(sms_status_array[res.data]) { 

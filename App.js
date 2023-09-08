@@ -52,7 +52,7 @@ const AuthStack = createNativeStackNavigator();
 function AuthStackScreen() {
   return (
     <AuthStack.Navigator initialRouteName="StartUp" screenOptions={{ gestureEnabled: false, headerTransparent:true, headerStyle: { backgroundColor: Colors.HEADER_NAV_COLOR, height: 50 }, headerTitleAlign: 'center', headerTitleStyle: { fontWeight: 'bold' }, headerTintColor: '#fff', headerBackTitleVisible: false }} headerMode='float'>
-      <AuthStack.Screen name="StartUp" component={StartUp} options={{ headerMode: false }} />
+      <AuthStack.Screen name="StartUp" component={StartUp} options={{ title:"", headerTransparent:false, headerShown: false }} />
       <AuthStack.Screen name="SignUpMobile" component={SignUpMobileScreen} options={{ title: 'Sign Up Mobile', headerTransparent:false }} />
       <AuthStack.Screen name="SelectDivision" component={SelectDivision} options={{ title: 'Division Selection', headerTransparent:false }} />
       <AuthStack.Screen name="SelectVehicle" component={SelectVehicle} options={{ title: 'Vehicle Selection', headerTransparent:false }} />
@@ -188,7 +188,7 @@ export default function App(props) {
 
   return (
     <AuthContext.Provider value={authContext}>
-      <CheckAppUpdate />
+      {/* <CheckAppUpdate /> */}
 
       <NavigationContainer>
         <RootStack.Navigator headerMode="none">
@@ -197,7 +197,7 @@ export default function App(props) {
           ) : netinfo.isConnected !== true ? (
             <RootStack.Screen name="Network" component={NetworkConnectionStatus} />
           ) : (
-            <RootStack.Screen name="App" component={AppStackScreen} />
+            <RootStack.Screen name="App" component={AppStackScreen} options={{ headerShown: false }} />
           )}
         </RootStack.Navigator>
       </NavigationContainer>

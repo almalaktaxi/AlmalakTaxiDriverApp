@@ -40,12 +40,14 @@ export const StartUp = (props) => {
     <View style={styles.container}>
         <CustomStatusBar backgroundColor={Colors.BUTTON_COLOR} />
 
-        <Animatable.View animation="zoomIn" iterationCount={1} style={{ height: 100, width: 100, alignItems: 'center', justifyContent: 'flex-start', marginBottom: 10 }}>
+        <Animatable.View animation="zoomIn" iterationCount={1} style={{ height: 100, width: 100, alignItems: 'center', justifyContent: 'flex-start', marginBottom: 30 }}>
           <Image style={{ height: 128, width: 128, resizeMode: 'contain' }} source={require('../assets/logo.png')} />
         </Animatable.View>
 
-        <View style={{ alignItems: 'center', justifyContent: 'center', marginBottom: 30 }}>
-          <Text style={{ fontSize: 26, fontWeight: "bold", marginBottom: 10 }}>Welcome to AlmalakTaxi Driver App</Text>
+        <View style={{ alignItems: 'center', justifyContent: 'center', marginBottom: 20 }}>
+          <Text style={{ fontSize: 26, fontWeight: "bold", marginBottom: 10 }}>
+            Welcome to Almalak Driver App
+          </Text>
         </View>
 
         {/* <SliderFlatlist images={fromOnline ? sliderImages : localSliderImages} fromUrl={fromOnline} sliderHeight={300} dotPosition="bottom" /> */}

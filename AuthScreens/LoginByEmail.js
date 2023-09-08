@@ -119,7 +119,7 @@ export default function LoginByEmail(props) {
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <Animatable.View animation="slideInUp" iterationCount={1} style={{height: 330, backgroundColor: "#fff" }}>
           <Animated.View style={{ opacity: 1, alignItems: 'center', paddingHorizontal: 10 }}>
-            <Text style={{ fontSize: 24 }}>Get Moving with AlmalakTaxi</Text>
+            <Text style={{ fontSize: 24 }}>Get Moving with Almalak</Text>
           </Animated.View>
 
           <Animated.View style={{ marginTop: 10, paddingHorizontal: 10 }}>
