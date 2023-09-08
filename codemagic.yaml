@@ -56,7 +56,7 @@ workflows:
         node: 14
         # yarn: 1.x
         xcode: latest
-        android: latest
+        # android: latest
       scripts:
         - name: Install dependencies
           script: |
