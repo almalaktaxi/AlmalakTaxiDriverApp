@@ -93,10 +93,10 @@ workflows:
             # Or to Firebase App Distribution:
             # firebase appdistribution:distribute ./build/YourApp.ipa --app your-firebase-app-id --groups your-distribution-groups --release-notes "Test build"
 
-      cache:
-        paths:
-          - node_modules
-          - ios/Pods
+      # cache:
+      #   paths:
+      #     - node_modules
+      #     - ios/Pods
 
 
     # react-native-ios:
