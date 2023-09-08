@@ -1,5 +1,5 @@
 workflows:
-  my-workflow:
+  ios-workflow:
     scripts:
       - name: Launch emulator       
         script: |
